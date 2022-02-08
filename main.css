@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    position: relative;
+}
+
+body h2{
+    color:white;
+    position: absolute;
+}
+
+#board{
+    display: flex;
+    width: 0;
+    height: 0;
+    flex-wrap: wrap;
+    position: absolute;
+    top:-100vh;
+}
+
+.square{
+    border: 1px solid white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square-inner-element{
+    transition: transform 0.5s ease-in;
+}
+
+.circle{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 3px solid white;
+}
+
+.cross{
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.cross:before, .cross:after{
+    content: '';
+    position: absolute;
+    background: white;
+    width: 40px;
+    height: 2px;
+    top:18px;
+}
+
+.cross:before{
+    transform: rotate(45deg);
+}
+.cross:after{
+    transform: rotate(-45deg);
+}
+
+#choose-size{
+    position: absolute;
+}
+
+#choose-size h2{
+    size: 45px;
+    color: white;
+    text-align: center;
+    position: unset;
+}
+
+#choose-size .btnSize{
+    width: 100px;
+    height: 50px;
+    background: transparent;
+    color: white;
+    font-size: 30px;
+    border: 1px solid white;
+    box-shadow: white;
+}
+
+.btnRestart{
+    width: 180px;
+    height: 60px;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    border: 1px solid white;
+    box-shadow: white;
+    position: absolute;
+    top:calc(50% + 140px);
+}
